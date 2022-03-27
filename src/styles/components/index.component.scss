@@ -1,0 +1,118 @@
+.page {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+        z-index: 15;
+
+        .bio {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .title {
+                font-family: GintoNord-Bold, serif;
+                font-size: 50px;
+                animation: fadeIn 2s;
+            }
+            .about {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+            }
+        }
+        .emoji {
+            font-size: 150px;
+            animation: waveHand 3s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .dislike {
+            width: 205px;
+            height: 225px;
+            animation: dislikeSpin 1s linear infinite;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .page {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .page {
+        .container {
+            .bio {
+                .title {
+                    font-size: 35px;
+                }
+                .about {
+                    flex-wrap: wrap;
+                }
+            }
+
+            .emoji {
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .page {
+        .container {
+            .bio {
+                .title {
+                    font-size: 30px;
+                }
+                .about {
+                    flex-wrap: wrap;
+                }
+            }
+
+            .emoji {
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes waveHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(13deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dislikeSpin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}

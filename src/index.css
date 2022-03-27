@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+@font-face {
+  font-family: "GintoNord-Bold";
+  font-display: swap;
+  src: url("../public/fonts/Ginto-Nord-Black.ttf")
+}
+
+@font-face {
+  font-family: "Ginto";
+  font-display: swap;
+  src: url("../public/fonts/Ginto-Black.ttf")
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #070606 !important;
+  color: white !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
