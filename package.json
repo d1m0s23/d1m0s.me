@@ -1,5 +1,5 @@
 {
-  "name": "d1m0s23",
+  "name": "d1m0s23 WebSite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,6 @@
     "react-i18next": "^11.16.2",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
-    "react-scroll-motion": "^0.2.6",
     "react-tsparticles": "^1.42.4",
     "sass": "^1.49.9",
     "typescript": "^4.6.3"

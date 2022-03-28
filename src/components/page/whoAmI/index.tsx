@@ -3,7 +3,6 @@ import data from '../../../data/buttons.json'
 import {useState} from "react";
 import {Container} from "@chakra-ui/react";
 import Button from "../../button";
-import {Animator, batch, Fade, MoveOut, Sticky} from "react-scroll-motion";
 
 export default function WhoAmI() {
     const [dislikeView, setDislikeView] = useState(false);
