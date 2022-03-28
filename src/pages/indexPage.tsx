@@ -1,12 +1,12 @@
-import { Parallax } from "react-scroll-parallax";
-import WhoAmI from "../components/whoAmI";
+import WhoAmI from "../components/page/whoAmI";
+import WhatCanIDo from "../components/page/whatCanIDo";
 import Particles from "react-tsparticles";
 
 export default function IndexPage() {
     return (
         <>
             <WhoAmI/>
-
+            <WhatCanIDo/>
             <Particles
                 id="particles"
                 options={{

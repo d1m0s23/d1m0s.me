@@ -12,6 +12,12 @@
   src: url("../public/fonts/Ginto-Black.ttf")
 }
 
+@font-face {
+  font-family: "MinSans-Regular";
+  font-display: swap;
+  src: url("../public/fonts/MinSans-Regular.ttf")
+}
+
 html, body {
   width: 100%;
   height: 100%;
