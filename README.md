@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to own-cardsite 👋</h1>
+<h1 align="center">Welcome to d1m0s23 WebSite👋</h1>
 <p>
   <a href="#" target="_blank">
     <img alt="License: Apache License" src="https://img.shields.io/badge/License-Apache License-yellow.svg" />
@@ -11,20 +11,23 @@
 
 ```sh
 npm i
+npm install -g serve
 ```
 
-## Usage
+## Prepare
 
 ```sh
 npm run build
-
-npm start
 ```
 
-## Run tests
-
+## Run in production
 ```sh
-npm run test
+serve -s build -l 3000
+```
+
+## Run dev server
+```sh
+npm start
 ```
 
 ## Author
@@ -33,9 +36,6 @@ npm run test
 
 * Github: [@d1m0s23](https://github.com/d1m0s23)
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
