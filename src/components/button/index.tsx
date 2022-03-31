@@ -3,9 +3,9 @@ import React from "react";
 import {FaDiscord, FaTelegram, FaGithub, FaSteam} from "react-icons/fa";
 
 interface Props extends React.ButtonHTMLAttributes<Props>{
-    icon?: string
-    content?: string
-    url?: string
+    icon: string
+    content: string
+    url: string
 }
 
 const Button: React.FC<Props> = (props) => {
@@ -29,7 +29,7 @@ const Button: React.FC<Props> = (props) => {
                     {getIcon()}
                 </div>
                 <div className="content">
-                    {props?.content}
+                    {props.content}
                 </div>
             </a>
         </>
