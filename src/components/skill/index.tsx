@@ -22,8 +22,8 @@ import {
 } from "react-icons/di";
 
 interface Props extends React.ButtonHTMLAttributes<Props>{
-    icon?: string
-    content?: string
+    icon: string
+    content: string
 }
 
 const Skill: React.FC<Props> = (props) => {
@@ -87,7 +87,7 @@ const Skill: React.FC<Props> = (props) => {
                     {getIcon()}
                 </div>
                 <div className="content">
-                    {props?.content}
+                    {props.content}
                 </div>
             </div>
         </>
