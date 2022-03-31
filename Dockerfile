@@ -1,13 +1,16 @@
 FROM node:17
-WORKDIR /usr/src/app
+
+WORKDIR /home/node/d1m0s-website
 
 COPY package*.json ./
 
+USER node
+
 RUN npm install
 RUN npm install -g serve
-RUN serve -s build
 
-COPY . .
+COPY --chown=node:node . .
 
 EXPOSE 3000
-CMD [ "serve", "-l 3000" ]
+
+CMD [ "serve", "-s build", "-l 3000" ]
