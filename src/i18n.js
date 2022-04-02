@@ -11,7 +11,7 @@ i18n
 
     .init({
         fallbackLng: 'eng',
-        debug: true,
+        saveMissing: true,
 
         detection: {
             order: ['localStorage', 'navigator']
@@ -23,6 +23,10 @@ i18n
 
         interpolation: {
             escapeValue: false,
+        },
+
+        react: {
+            useSuspense: false
         }
     });
 
