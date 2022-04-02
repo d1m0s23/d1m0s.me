@@ -11,7 +11,6 @@ i18n
 
     .init({
         fallbackLng: 'eng',
-        saveMissing: true,
 
         detection: {
             order: ['localStorage', 'navigator']
