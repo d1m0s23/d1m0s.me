@@ -1,5 +1,6 @@
 import WhoAmI from "../components/page/whoAmI";
 import WhatCanIDo from "../components/page/whatCanIDo";
+import Footer from "../components/page/footer";
 import Particles from "react-tsparticles";
 
 export default function IndexPage() {
@@ -7,6 +8,7 @@ export default function IndexPage() {
         <>
             <WhoAmI/>
             <WhatCanIDo/>
+            <Footer/>
             <Particles
                 id="particles"
                 options={{

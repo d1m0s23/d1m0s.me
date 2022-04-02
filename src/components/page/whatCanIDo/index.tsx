@@ -3,15 +3,18 @@ import skills from '../../../data/skills.json'
 import toLearn from '../../../data/learn.json'
 import {Container} from "@chakra-ui/react";
 import Skill from "../../skill";
+import {useTranslation} from "react-i18next";
 
 export default function WhoAmI() {
+    const { t } = useTranslation();
+
     return (
         <div className="page">
             <Container className="container" maxW='container.xl'>
                 <div className="row">
                     <div className="col">
                         <div className="title">
-                            My skills
+                            {t('about.mySkills')}
                         </div>
                         <div className="list">
                             {skills.map(_skill => (
@@ -21,7 +24,7 @@ export default function WhoAmI() {
                     </div>
                     <div className="col">
                         <div className="title">
-                            What i want to learn
+                            {t('about.whatIWantToLearn')}
                         </div>
                         <div className="list">
                             {toLearn.map(_learn => (
