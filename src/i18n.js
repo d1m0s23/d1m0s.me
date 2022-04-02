@@ -10,11 +10,19 @@ i18n
     .use(initReactI18next)
 
     .init({
-        fallbackLng: 'en',
+        fallbackLng: 'eng',
         debug: true,
 
+        detection: {
+            order: ['localStorage', 'navigator']
+        },
+
+        backend: {
+            loadPath: '/locales/{{lng}}/translation.json'
+        },
+
         interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
         }
     });
 
