@@ -1,0 +1,28 @@
+footer {
+    display: flex;
+    justify-content: center;
+
+    margin: 4%;
+
+    .stack {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .developedBy {
+            text-align: center;
+            font-family: GintoNord-Bold;
+        }
+
+        .sourceCode {
+            color: #5a5a5a !important;
+            font-family: Ginto;
+            font-weight: 300;
+
+            &:hover {
+                color: #808080 !important;
+                cursor: pointer;
+            }
+        }
+    }
+}
