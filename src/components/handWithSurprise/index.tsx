@@ -4,6 +4,7 @@ import React, {useState} from "react";
 const Hand = () => {
     const [value, setValue] = useState(-1);
 
+
     const getSurprise = () => {
         switch (value) {
             case 1:
@@ -17,7 +18,12 @@ const Hand = () => {
                         alt="Surprise"
                     />
                 )
-            case 2:
+            case 2: {
+                const amogusAudio = new Audio("/assets/mp3/amogus.mp3");
+
+                amogusAudio.addEventListener('ended', () => setValue(-1));
+                amogusAudio.play();
+
                 return (
                     <img
                         className="surprise"
@@ -28,6 +34,7 @@ const Hand = () => {
                         alt="Surprise"
                     />
                 )
+            }
             case 5:
                 return (
                     <img
@@ -61,6 +68,34 @@ const Hand = () => {
                         alt="Surprise"
                     />
                 )
+            case 9: {
+                const rockSusAudio = new Audio("/assets/mp3/rockSus.mp3");
+
+                rockSusAudio.addEventListener('ended', () => setValue(-1));
+                rockSusAudio.play();
+
+                return (
+                    <img
+                        className="surprise"
+                        onClick={handleClick}
+                        src='/assets/surprises/9.gif'
+                        width="300px"
+                        height="225px"
+                        alt="Surprise"
+                    />
+                )
+            }
+            case 10:
+                return (
+                    <img
+                        className="surprise"
+                        onClick={handleClick}
+                        src='/assets/surprises/10.gif'
+                        width="300px"
+                        height="225px"
+                        alt="Surprise"
+                    />
+                )
             default:
                 return (
                     <img
@@ -77,7 +112,7 @@ const Hand = () => {
 
     const handleClick = () => {
         const min = 1;
-        const max = 8;
+        const max = 10;
 
         if(value === -1)
             setValue(Math.floor(Math.random() * (max - min + 1) + min));
