@@ -3,7 +3,10 @@ import React, {useState} from "react";
 
 const Hand = () => {
     const [value, setValue] = useState(-1);
+    const [playing, setPlaying] = useState(false);
 
+    const rockSusAudio = new Audio("/assets/mp3/rockSus.mp3");
+    const amogusAudio = new Audio("/assets/mp3/amogus.mp3");
 
     const getSurprise = () => {
         switch (value) {
@@ -19,10 +22,13 @@ const Hand = () => {
                     />
                 )
             case 2: {
-                const amogusAudio = new Audio("/assets/mp3/amogus.mp3");
-
-                amogusAudio.addEventListener('ended', () => setValue(-1));
-                amogusAudio.play();
+                amogusAudio.addEventListener('ended', () => {
+                    setValue(-1)
+                    setPlaying(false);
+                });
+                amogusAudio.play().then(() => {
+                    setPlaying(true);
+                });
 
                 return (
                     <img
@@ -69,10 +75,13 @@ const Hand = () => {
                     />
                 )
             case 9: {
-                const rockSusAudio = new Audio("/assets/mp3/rockSus.mp3");
-
-                rockSusAudio.addEventListener('ended', () => setValue(-1));
-                rockSusAudio.play();
+                rockSusAudio.addEventListener('ended', () => {
+                    setValue(-1)
+                    setPlaying(false);
+                });
+                rockSusAudio.play().then(() => {
+                    setPlaying(true);
+                });
 
                 return (
                     <img
@@ -113,6 +122,9 @@ const Hand = () => {
     const handleClick = () => {
         const min = 1;
         const max = 10;
+
+        if(playing)
+            return;
 
         if(value === -1)
             setValue(Math.floor(Math.random() * (max - min + 1) + min));
