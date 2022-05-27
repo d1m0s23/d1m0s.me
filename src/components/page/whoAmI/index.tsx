@@ -4,14 +4,11 @@ import {useState} from "react";
 import {Container} from "@chakra-ui/react";
 import Button from "../../button";
 import {useTranslation} from "react-i18next";
+import {FocusScope} from "@react-aria/focus";
+import HandWithSurprise from "../../handWithSurprise";
 
 export default function WhoAmI() {
     const { t } = useTranslation();
-    const [dislikeView, setDislikeView] = useState(false);
-
-    const handleClick = () => {
-        setDislikeView(!dislikeView);
-    }
 
     return (
         <>
@@ -22,25 +19,14 @@ export default function WhoAmI() {
                             {t('about.hello')}
                         </div>
                         <div className="about">
-                            {data.map(_button => (
-                                <Button icon={_button.icon} content={_button.content} url={_button.url} />
-                            ))}
+                            <FocusScope restoreFocus contain>
+                                {data.map(_button => (
+                                    <Button icon={_button.icon} content={_button.content} url={_button.url} />
+                                ))}
+                            </FocusScope>
                         </div>
                     </div>
-                    <div onClick={handleClick} className="emoji">
-                        {dislikeView ? (
-                            <img
-                                className="dislike"
-                                onClick={handleClick}
-                                src='/assets/dislike.png'
-                                alt="brawl start dislike"
-                            />
-                        ) : (
-                            <>
-                                👋
-                            </>
-                        )}
-                    </div>
+                    <HandWithSurprise/>
                 </Container>
             </div>
         </>

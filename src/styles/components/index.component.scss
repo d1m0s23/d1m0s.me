@@ -23,36 +23,22 @@
                 z-index: 15;
             }
         }
-        .emoji {
-            font-size: 150px;
-            animation: waveHand 3s;
-            animation-delay: 5s;
-            animation-iteration-count: infinite;
-            z-index: 15;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .dislike {
-            width: 205px;
-            height: 225px;
-            animation: dislikeSpin 1s linear infinite;
-        }
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 860px) {
     .page {
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            grid-gap: 5vh;
         }
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 660px) {
     .page {
         .container {
             .bio {
@@ -62,10 +48,6 @@
                 .about {
                     flex-wrap: wrap;
                 }
-            }
-
-            .emoji {
-                font-size: 100px;
             }
         }
     }
@@ -83,13 +65,9 @@
 
                     .button {
                         font-size: 15px;
-                        padding: 3px;
+                        padding: 3px 10px 3px 10px;
                     }
                 }
-            }
-
-            .emoji {
-                font-size: 100px;
             }
         }
     }
@@ -114,24 +92,5 @@
     }
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes waveHand {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(13deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes dislikeSpin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform:rotate(360deg);
     }
 }

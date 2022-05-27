@@ -5,7 +5,8 @@
     .row {
         display: flex;
         flex-direction: row;
-        gap: 15px;
+        flex-shrink: 2;
+        grid-gap: 15px;
 
         .col {
             max-width: 50%;
@@ -14,10 +15,13 @@
                 font-family: GintoNord-Bold, serif;
                 font-size: 35px;
             }
+
             .list {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 15px;
+                grid-gap: 15px;
+
+                margin-top: 2vh;
             }
         }
     }
@@ -47,7 +51,10 @@
                 }
                 .list {
                     justify-content: center;
+                    
                     .badge {
+                        padding: 3px 10px 3px 10px;
+
                         .content {
                             font-size: 13px;
                         }

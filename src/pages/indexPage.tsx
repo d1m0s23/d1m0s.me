@@ -1,5 +1,5 @@
 import WhoAmI from "../components/page/whoAmI";
-import WhatCanIDo from "../components/page/whatCanIDo";
+import WhatCanIDo from "../components/page/mySkills";
 import Footer from "../components/page/footer";
 import Particles from "react-tsparticles";
 

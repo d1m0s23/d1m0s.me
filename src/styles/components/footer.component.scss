@@ -11,16 +11,18 @@ footer {
 
         .developedBy {
             text-align: center;
-            font-family: GintoNord-Bold;
+            font-family: GintoNord-Bold, serif;
         }
 
         .sourceCode {
-            color: #5a5a5a !important;
-            font-family: Ginto;
-            font-weight: 300;
+            font-family: Ginto, serif;
+
+            color: #5a5a5a;
+
+            transition: color 235ms;
 
             &:hover {
-                color: #808080 !important;
+                color: #808080;
                 cursor: pointer;
             }
         }

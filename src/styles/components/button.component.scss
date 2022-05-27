@@ -3,11 +3,13 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 5px;
+    grid-gap: 5px;
+    padding: 6px 16px 6px 16px;
 
     background: white;
     border-radius: 10px;
-    padding: 5px;
+
+    transition: background-color 230ms;
 
     .icon {
         padding: 0;
