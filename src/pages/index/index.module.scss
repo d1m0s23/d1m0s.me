@@ -1,0 +1,50 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10vh;
+
+    margin-top: 5vh;
+    width: 100%;
+    height: 100%;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 1vh;
+
+        .h1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            grid-gap: 1vh;
+            margin: 0;
+            padding: 0;
+
+            color: white;
+            font-family: MontBlack, sans-serif;
+            font-size: 46px;
+
+            .hand {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        grid-gap: 2vw;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .page {
+        .row {
+            flex-direction: column;
+        }
+    }
+}

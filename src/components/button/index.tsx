@@ -1,42 +1,19 @@
-import '../../styles/components/button.component.scss'
-import React from "react";
-import {FaDiscord, FaTelegram, FaGithub, FaSteam} from "react-icons/fa";
-import { FocusRing } from '@react-aria/focus';
+import styles from './button.module.scss'
+import React, { LinkHTMLAttributes } from 'react'
 
-interface Props extends React.ButtonHTMLAttributes<Props>{
-    icon: string
-    content: string
-    url: string
+interface Props extends LinkHTMLAttributes<any> {
+    children: any
+    icon: any
+    href?: string
 }
 
-const Button: React.FC<Props> = (props) => {
-    const getIcon = () => {
-        switch (props.icon) {
-            case "discord":
-                return <FaDiscord/>
-            case "telegram":
-                return <FaTelegram/>
-            case "github":
-                return <FaGithub/>
-            case "steam":
-                return <FaSteam/>
-        }
-    }
-
+const Button: React.FC<Props> = props => {
     return (
-        <>
-            <FocusRing focusRingClass="focus-ring" autoFocus>
-                <a type="button" className="button" href={props.url}>
-                    <div className="icon">
-                        {getIcon()}
-                    </div>
-                    <div className="content">
-                        {props.content}
-                    </div>
-                </a>
-            </FocusRing>
-        </>
-    );
+        <a className={styles.button} {...props}>
+            <div className={styles.content}>{props.children}</div>
+            <div className={styles.icon}>{props.icon}</div>
+        </a>
+    )
 }
 
-export default Button;
+export default Button

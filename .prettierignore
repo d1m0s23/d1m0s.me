@@ -1,0 +1,10 @@
+dist
+node_modules
+.next
+.idea
+tsconfig.json
+README.md
+package-lock.json
+.prettierrc.json
+public
+declarations.d.ts

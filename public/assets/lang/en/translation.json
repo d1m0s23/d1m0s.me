@@ -1,0 +1,19 @@
+{
+  "title": {
+    "hello": "Good day",
+    "i": "Im d1m0s",
+    "canBuild": "I can build"
+  },
+  "skills": {
+    "title": "My skills",
+    "build": {
+      "web": "WebSites",
+      "apps": "Phone Apps",
+      "minePlugins": "Minecraft Plugins",
+      "bots": "ChatBots"
+    }
+  },
+  "footer": {
+    "license": "Source code available at Github under GPL-3.0 License."
+  }
+}

@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'MontBlack';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/public/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'MontBold';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/public/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    unicode-range: U+000-5FF;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    background-color: #0a0a0a !important;
+    color: white !important;
+    scroll-behavior: smooth;
+}
+
+.h0,
+h1,
+h4 {
+    color: white;
+    font-family: MontBlack, sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.h0 {
+    font-size: 80px;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.fadeIn {
+    animation: fadeIn 2s;
+    opacity: 1;
+}
+
+.ad-1 {
+    animation-duration: 3s;
+}
+
+.focus-ring {
+    outline: 2px solid white !important;
+    outline-offset: 2px;
+}
+
+.focus-ring:focus {
+    outline: initial;
+}
+
+*:focus {
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .h0 {
+        font-size: 50px;
+    }
+}

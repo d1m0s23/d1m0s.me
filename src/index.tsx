@@ -1,17 +1,19 @@
-import React, { StrictMode } from 'react';
-import {render} from 'react-dom';
-import IndexPage from "./pages/indexPage";
-import {ChakraProvider} from '@chakra-ui/react';
-import './index.css';
-import './i18n';
+import React, { StrictMode } from 'react'
+import ReactDOM from 'react-dom/client'
 
-const rootElement = document.getElementById("root");
+import Twemoji from 'react-twemoji'
 
-render(
+import IndexPage from './pages/index'
+import Footer from './components/footer'
+import './_global.css'
+import './i18next.config'
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+root.render(
     <StrictMode>
-        <ChakraProvider>
+        <Twemoji>
             <IndexPage />
-        </ChakraProvider>
-    </StrictMode>,
-    rootElement
-);
+            <Footer />
+        </Twemoji>
+    </StrictMode>
+)
