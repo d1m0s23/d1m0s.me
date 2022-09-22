@@ -34,11 +34,19 @@ import { GrGraphQl } from 'react-icons/gr'
 
 const IndexPage = () => {
     const [audio, setAudio] = useState(0)
+    const [playedAudio, setPlayedAudio] = useState(0)
 
     const { t } = useTranslation()
 
     const handleClick = () => {
-        setAudio(Math.floor(Math.random() * (7 - 1) + 1))
+        const timeOut = setTimeout(() => {
+            const value = Math.floor(Math.random() * (7 - 1) + 1)
+
+            if (value !== playedAudio && value !== -1) {
+                setAudio(value)
+                clearTimeout(timeOut)
+            }
+        }, 1)
     }
 
     const particlesInit = useCallback(async (engine: any) => {
@@ -51,6 +59,7 @@ const IndexPage = () => {
             _audio.play()
 
             _audio.addEventListener('ended', () => {
+                setPlayedAudio(audio)
                 setAudio(0)
             })
         }

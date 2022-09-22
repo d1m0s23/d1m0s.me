@@ -28,7 +28,12 @@
             font-size: 46px;
 
             .hand {
+                z-index: 20;
                 cursor: pointer;
+            }
+
+            img {
+                z-index: 20;
             }
         }
     }
